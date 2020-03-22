@@ -8,6 +8,7 @@ The official action azure/login@v1 does not use `$HOME`.
 ## Usage
 
 ```
+
 - uses: segraef/azlogin@v1
   with:
     clientId: ${{ secrets.clientId }}
