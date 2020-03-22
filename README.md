@@ -1,6 +1,6 @@
 # GitHub Action for the Azure Login
 
-The GitHub Action for [Azure](https://azure.microsoft.com/) Login wraps the Azure PowerShell Core's `Connect-AzAccount`, allowing for Actions to log into Azure.
+The GitHub Action for [Azure](https://azure.microsoft.com/) Login wraps the Azure PowerShell's `Connect-AzAccount`, allowing for Actions to log into Azure.
 
 Because `$HOME` is persisted across Actions, the `az login` command will save this information on the filesystem, allowing other Actions to reuse the context.
 The official action azure/login@v1 does not use `$HOME`.
