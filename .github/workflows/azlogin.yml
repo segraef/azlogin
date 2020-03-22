@@ -17,4 +17,4 @@ jobs:
         clientId: "${{ secrets.clientId }}"
         clientSecret: "${{ secrets.clientSecret }}"
         tenantId: "${{ secrets.tenantId }}"
-        subscriptionId: "${{ secrets.subscriptionId }}"
+        subscriptionId: "${{ secrets.subscriptionId}}"
