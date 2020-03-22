@@ -1,0 +1,20 @@
+name: azlogin
+
+on:
+  push:
+    branches: [ azlogin ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  azdeploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: login
+      uses: segraef/azlogin@v1
+      with:
+        clientId: "${{ secrets.clientId }}"
+        clientSecret: "${{ secrets.clientSecret }}"
+        tenantId: "${{ secrets.tenantId }}"
+        subscriptionId: "${{ secrets.subscriptionId }}"

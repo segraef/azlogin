@@ -1,0 +1,30 @@
+name: azlogin
+description: 'GitHub Action Azure Login (azlogin)'
+inputs:
+  clientId:
+    description: 'Application (client) ID'
+    required: true
+  clientSecret:
+    description: 'Application (client) secret/password'
+    required: true
+  tenantId:
+    description: 'Azure directory (tenant) ID'
+    required: false
+  subscriptionId:
+    description: 'Azure subscription ID'
+    required: false
+outputs:
+  output:
+    description: 'Output'
+runs:
+  using: "docker"
+  image: "dockerfile"
+  args:
+    - -clientId
+    - ${{ inputs.clientId }}
+    - -clientSecret
+    - ${{ inputs.clientSecret }}
+    - -tenantId
+    - ${{ inputs.tenantId }}
+    - -subscriptionId
+    - ${{ inputs.subscriptionId }}
