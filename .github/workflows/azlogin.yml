@@ -2,7 +2,7 @@ name: azlogin
 
 on:
   push:
-    branches: [ azlogin ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
