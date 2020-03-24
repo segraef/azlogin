@@ -2,7 +2,8 @@ Param(
   [string]$clientId,
   [string]$clientSecret,
   [string]$tenantId,
-  [string]$subscriptionId
+  [string]$subscriptionId,
+  [string]$identity
 )
 
 if ($clientId -and $clientSecret -and $tenantId) {
@@ -15,8 +16,13 @@ else {
   exit
 }
 
+if ($identity -like "yes") {
+  Connect-AzAccount -Identity
+}
+
 if ($subscriptionId) {
   Set-AzContext $subscriptionId
+  Get-AzContext
 }
 else {
   $subscriptions = Get-AzSubscription

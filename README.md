@@ -25,6 +25,10 @@ The official action azure/login@v1 does not use `$HOME`.
 - `tenantId` – **Required**
 - `subscriptionId` – **Required**
 
+## Variables
+
+- `identity: yes/no` – **Optional**
+
 You can create get the above details by running following command ([details](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac)).
 
 `az ad sp create-for-rbac --name "<spName>" --role contributor --scopes /subscriptions/<subscriptionId> --sdk-auth`

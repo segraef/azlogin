@@ -13,6 +13,10 @@ inputs:
   subscriptionId:
     description: 'Azure subscription ID'
     required: false
+  identity:
+    description: 'Use managed identity for login.'
+    default: 'no'
+    required: false
 outputs:
   output:
     description: 'Output'
@@ -28,3 +32,5 @@ runs:
     - ${{ inputs.tenantId }}
     - -subscriptionId
     - ${{ inputs.subscriptionId }}
+    - -identity
+    - ${{ inputs.identity }}
