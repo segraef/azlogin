@@ -13,8 +13,8 @@ The official action azure/login@v1 does not use `$HOME`.
   with:
     clientId: ${{ secrets.clientId }}
     clientSecret: ${{ secrets.clientSecret }}
-    tenantId: ${{ secrets.tenantId }}
-    subscriptionId: ${{ secrets.subscriptionId }}
+    tenantId: <tenantId>
+    subscriptionId: <subscriptionId>
 
 ```
 
@@ -28,6 +28,7 @@ The official action azure/login@v1 does not use `$HOME`.
 ## Variables
 
 - `identity: yes/no` – **Optional**
+- `environmentName` – **Optional**
 
 You can create get the above details by running following command ([details](https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac)).
 
