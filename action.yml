@@ -17,6 +17,9 @@ inputs:
     description: 'Use managed identity for login.'
     default: 'no'
     required: false
+  environmentName:
+    description: 'For a specific Azure enviroment liek Azure US Gov.'
+    required: false
 outputs:
   output:
     description: 'Output'
@@ -34,3 +37,5 @@ runs:
     - ${{ inputs.subscriptionId }}
     - -identity
     - ${{ inputs.identity }}
+    - -environmentName
+    - ${{ inputs.environmentName }}
