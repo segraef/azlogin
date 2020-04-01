@@ -18,3 +18,4 @@ jobs:
         clientSecret: "${{ secrets.clientSecret }}"
         tenantId: "${{ secrets.tenantId }}"
         subscriptionId: "${{ secrets.subscriptionId }}"
+        identity: "no"  
